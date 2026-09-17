@@ -1,0 +1,152 @@
+/* Главное окно и базовые виджеты в стиле Цербера */
+QMainWindow, QWidget {
+    background-color: #141416; /* Угольно-черный матовый фон Нормандии СР-2 */
+    color: #E1E1E6;            /* Светло-серый жемчужный текст */
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Разделители панелей (QSplitter) */
+QSplitter::handle {
+    background-color: #222225;
+}
+
+/* Боковые рамки Top Bar, дерева проекта и панели СУЗИ */
+QFrame {
+    background-color: #1A1A1C;
+    border: 1px solid #2D2D31; /* Стальные графитовые границы */
+    border-radius: 6px;
+}
+
+/* Поля ввода (Редактор кода, консоль, чат ИИ) */
+QTextEdit, QTreeView, QLineEdit {
+    background-color: #0E0E10; /* Глубокий черный цвет для окон терминалов */
+    border: 1px solid #3A3A40;
+    border-radius: 6px;
+    color: #E1E1E6;
+}
+
+/* Всплывающее меню автодополнения (Completer Popup) */
+QAbstractItemView {
+    background-color: #1A1A1C;
+    border: 1px solid #FF6A00;
+    color: #E1E1E6;
+    selection-background-color: #FF6A00;
+    selection-color: #0E0E10;
+}
+
+/* Кнопки управления */
+QPushButton {
+    background-color: #252528;
+    border: 1px solid #FF6A00; /* Фирменная неоново-оранжевая кайма Цербера */
+    border-radius: 4px;
+    padding: 5px 12px;
+    color: #FF6A00;
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #FF6A00; /* Кнопка полностью наливается оранжевым при наведении */
+    color: #0E0E10;
+}
+
+QPushButton:pressed {
+    background-color: #D65900;
+}
+
+QPushButton:disabled {
+    background-color: #1A1A1C;
+    border: 1px solid #44444A;
+    color: #55555A;
+}
+
+/* Специальный стиль для кнопки RUN (ИСПРАВЛЕНО: убрали box-shadow, вызывавший ошибку!) */
+QPushButton#run_button {
+    background-color: #FF6A00;
+    color: #0E0E10;
+    border: 1px solid #FF8533;
+}
+
+QPushButton#run_button:hover {
+    background-color: #FF8533;
+}
+
+/* Кнопка СТОП */
+QPushButton#stop_button {
+    background-color: #2A1414;
+    color: #FF4444;
+    border: 1px solid #FF4444;
+}
+
+QPushButton#stop_button:hover {
+    background-color: #FF4444;
+    color: #0E0E10;
+}
+
+/* Выпадающие списки (QComboBox) */
+QComboBox {
+    background-color: #252528;
+    border: 1px solid #3A3A40;
+    border-radius: 4px;
+    padding: 3px 5px;
+    color: #E1E1E6;
+}
+
+QComboBox::drop-down {
+    border: none;
+}
+
+QComboBox QAbstractItemView {
+    background-color: #1A1A1C;
+    border: 1px solid #3A3A40;
+    selection-background-color: #FF6A00;
+    selection-color: #0E0E10;
+}
+
+/* СТИЛИЗАЦИЯ ВКЛАДОК ЦЕНТРАЛЬНОЙ И НИЖНЕЙ ПАНЕЛИ */
+QTabWidget::panel {
+    border: 1px solid #2D2D31;
+    background-color: #0E0E10;
+}
+
+QTabBar::tab {
+    background-color: #1A1A1C;
+    color: #8C8C96;
+    padding: 6px 14px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border: 1px solid #2D2D31;
+    border-bottom: none;
+    margin-right: 2px;
+}
+
+QTabBar::tab:selected {
+    background-color: #0E0E10;
+    color: #FF6A00; /* Оранжевый текст для активной вкладки */
+    border-bottom: 2px solid #FF6A00;
+    font-weight: bold;
+}
+
+QTabBar::tab:hover {
+    background-color: #252528;
+    color: #E1E1E6;
+}
+
+/* Стандартные кнопки управления окном Windows */
+QPushButton#window_min_button, 
+QPushButton#window_max_button, 
+QPushButton#window_close_button {
+    border: none;
+    background: transparent;
+    color: #E1E1E6;
+    font-size: 11px;
+}
+
+QPushButton#window_min_button:hover, 
+QPushButton#window_max_button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+QPushButton#window_close_button:hover {
+    background-color: #E81123 !important;
+    color: #FFFFFF !important;
+}

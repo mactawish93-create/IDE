@@ -1,0 +1,130 @@
+/* Главное окно и панели в стиле VS Code */
+QMainWindow, QWidget {
+    background-color: #1E1E1E;
+    color: #D4D4D4;
+    font-family: 'Consolas', 'Segoe UI', sans-serif;
+}
+
+/* Рамки панелей */
+QFrame {
+    background-color: #252526;
+    border: 1px solid #3C3C3C;
+    border-radius: 4px;
+}
+
+/* Поля ввода и редакторы */
+QTextEdit, QTreeView {
+    background-color: #1E1E1E;
+    border: 1px solid #3C3C3C;
+    color: #9CDCFE;
+}
+
+/* Кнопки */
+QPushButton {
+    background-color: #333333;
+    border: 1px solid #444444;
+    color: #CCCCCC;
+    padding: 6px 12px;
+    border-radius: 3px;
+}
+
+QPushButton:hover {
+    background-color: #444444;
+    color: #FFFFFF;
+}
+
+QPushButton#run_button {
+    background-color: #0E639C;
+    color: #FFFFFF;
+    border: 1px solid #1177BB;
+    font-weight: bold;
+}
+
+QPushButton#run_button:hover {
+    background-color: #1177BB;
+}
+
+/* СТИЛИЗАЦИЯ ВКЛАДОК (Исправляем баг со скриншота) */
+QTabWidget::panel {
+    border: 1px solid #3C3C3C;
+    background-color: #1E1E1E;
+}
+
+QTabBar::tab {
+    background-color: #2D2D2D;
+    color: #969696;
+    padding: 8px 16px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border: 1px solid #3C3C3C;
+    border-bottom: none;
+}
+
+QTabBar::tab:selected {
+    background-color: #1E1E1E;
+    color: #FFFFFF;
+    border-bottom: 2px solid #0E639C;
+}
+
+QTabBar::tab:hover {
+    background-color: #333333;
+    color: #FFFFFF;
+}
+
+/* Специальный стиль для кнопки STOP */
+QPushButton#stop_button {
+    background-color: #3d1a24;
+    color: #FF5555;
+    border: 1px solid #FF5555;
+}
+
+QPushButton#stop_button:hover {
+    background-color: #FF5555;
+    color: #110B1C;
+}
+
+QPushButton#stop_button:disabled {
+    background-color: #22141A;
+    color: #55333D;
+    border: 1px solid #44222B;
+}
+/* Подсветка кнопок управления безрамочным окном */
+QPushButton#window_close_button:hover {
+    background-color: #E81123 !important;
+    color: white !important;
+}
+
+/* Эффекты наведения для системных кнопок в шапке */
+QPushButton#window_close_button:hover {
+    background-color: #E81123 !important;
+    color: white !important;
+}
+
+TopBar QPushButton:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Легкая подсветка для обычных кнопок окон */
+}
+
+/* Для светлой темы лучше использовать темный налет при наведении: */
+/* background-color: rgba(0, 0, 0, 0.05); */
+
+/* Стандартное поведение кнопок окон Windows */
+QPushButton#window_min_button, 
+QPushButton#window_max_button, 
+QPushButton#window_close_button {
+    border: none;
+    background: transparent;
+    color: #FFFFFF; /* Сделай черным (#000000) для светлой темы light.qss */
+    font-size: 11px;
+}
+
+/* Эффект наведения для Свернуть и Развернуть (светло-серый налет) */
+QPushButton#window_min_button:hover, 
+QPushButton#window_max_button:hover {
+    background-color: rgba(255, 255, 255, 0.15); /* Для светлой темы используй: rgba(0,0,0,0.08) */
+}
+
+/* Эффект наведения для кнопки Закрыть (фирменный виндовый красный) */
+QPushButton#window_close_button:hover {
+    background-color: #E81123 !important;
+    color: #FFFFFF !important;
+}
